@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sedgwick Ave', cursive;
+}
+
+body {
+    background-color: #191c2f
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+    letter-spacing: 1px;
+    color: #efde79;
+    font-weight: normal;
+}
+
+div.results {
+    text-align: center;
+    height: 60vh;
+    margin: 0 auto;
+    /* border: 1px solid green; */
+    width: 60vw;
+
+}
+
+div.results i {
+
+    text-align: center;
+    font-size: 70px;
+    color: #c62e32;
+
+}
+
+div.icons {
+
+    /* border: 1px solid red; */
+    width: 60%;
+    margin: 40px auto;
+
+}
+
+.fa-user {
+    margin: 0 0 0 100px
+}
+
+span {
+    font-size: 40px;
+    /* border: 1px solid pink; */
+    color: #fff;
+}
+
+div.score {
+    /* border: 1px solid yellow; */
+    display: inline-block;
+    margin-left: 100px;
+}
+
+div.results button {
+    margin-top: 100px;
+    font-size: 20px;
+    height: 50px;
+    width: 120px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+div.hands {
+    margin-top: 100px;
+}
+
+div.hands h2 {
+    color: #efde79;
+    margin-bottom: 50px;
+}
+
+div.hands img {
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    margin-left: 40px;
+}
