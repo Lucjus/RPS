@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-image: radial-gradient(#1f3756, #141539);
+    color: white;
+    height: 100vh;
+    text-transform: uppercase;
+    font-size: .8rem;
+
+}
+
+
+.logo-score {
+    width: 85%;
+    margin: 2em auto;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-score {
+    font-size: 0.8rem;
+    margin: .8em;
+    padding: .25em;
+    text-align: center;
+    color: hsl(229, 64%, 46%);
+    background-color: white;
+    width: 20%;
+    border-radius: 5px;
+
+}
+
+.logo img {
+    width: 70%
+}
+
+.logo {
+    padding: 1em;
+}
+
+.result {
+    font-size: 2rem;
+    color: hsl(229, 25%, 31%);
+}
+
+
+#action-section {
+    background-image: url('images/bg-pentagon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 500px;
+    min-width: 300px;
+    position: relative;
+    height: 50vh;
+    margin: 5em auto;
+    border: 1px solid red;
+}
+
+.player-pick {
+    position: absolute;
+    left: 13%;
+    top: 10%;
+    display: none;
+}
+
+.computer-pick {
+    position: absolute;
+    right: 9%;
+    top: 10%;
+    display: none;
+}
+
+.action-section-duel-commands {
+
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+    background: transparent
+}
+
+#scissors-command {
+    top: -20%;
+    left: 37%;
+    background: radial-gradient(#ec9e0e, #eca922);
+    box-shadow: inset 0px -6px 3px #a46e0a;
+    transition: .3s;
+}
+
+#scissors-command:hover {
+
+    background: radial-gradient(#e0970f, #db9c1e);
+
+}
+
+
+#paper-command {
+    top: 20%;
+    left: 75%;
+    background: radial-gradient(#4865f4, #5671f5);
+    box-shadow: inset 0px -6px 3px #1f3edb;
+    transition: .3s;
+}
+
+#spock-command {
+    top: 20%;
+    left: 0;
+    background: radial-gradient(#38a0b3, #52bed1);
+    box-shadow: inset 0px -6px 3px #0c8cbe;
+    transition: .3s;
+}
+
+#spock-command:hover {
+
+    background: radial-gradient(#45b6ca, #2caec5);
+
+}
+
+
+#lizard-command {
+    bottom: -20%;
+    left: 15%;
+    background: radial-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+    box-shadow: inset 0px -6px 3px #7f21a5;
+    transition: .3s;
+}
+
+#lizard-command:hover {
+    bottom: -20%;
+    left: 15%;
+    background: radial-gradient(hsl(261, 63%, 57%), hsl(261, 57%, 58%));
+    box-shadow: inset 0px -6px 3px #7f21a5;
+
+}
+
+#rock-command {
+    top: 80%;
+    left: 60%;
+    background: radial-gradient(#dc2e4e, #dd405d);
+    box-shadow: inset 0px -6px 3px #ae1e38;
+    transition: .3s;
+}
+
+#scissors-svg {
+    background: url('images/icon-scissors.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#spock-svg {
+    background: url('images/icon-spock.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#paper-svg {
+    background: url('images/icon-paper.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#lizard-svg {
+    background: url('images/icon-lizard.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#rock-svg {
+    background: url('images/icon-rock.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.svgs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px;
+    height: 65px;
+    z-index: 3;
+}
+
+.white-shadow-background {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #E9E9E7;
+    box-shadow: inset 0 5px 5px #8c8c8c;
+    background-position: center;
+    z-index: -2;
+}
+
+.kurwa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 130px;
+    z-index: 5;
+    border-radius: 50%;
+}
+
+
+
+
+.computer-circle {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: black;
+    animation-name: ich-habe-wyjebane;
+    animation-duration: 1s;
+
+    opacity: .2
+}
+
+.computer-circle-pos {
+    display: block;
+    top: 50%;
+    left: 64%;
+    transform: translateY(-50%);
+
+}
+
+.player-circle {
+    position: absolute;
+    transform: translateY(-50%);
+
+}
+
+
+
+
+@keyframes ich-habe-wyjebane {
+
+    0% {
+        transform: scale(1) translateY(-50%);
+
+    }
+
+    25% {
+        transform: scale(0.1) translateY(-50%);
+
+    }
+
+    50% {
+        transform: scale(1) translateY(-50%);
+
+    }
+
+    75% {
+        transform: scale(0.1) translateY(-50%);
+
+    }
+
+    100% {
+        transform: scale(1) translateY(-50%);
+
+    }
+}
+
+.wygrana {
+    position: absolute;
+    display: block;
+    background-image: repeating-radial-gradient(#1e1e48 25%, #1f3756 38%);
+    z-index: -5;
+    opacity: 40%;
+    top: -5%;
+    left: -12%;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+
+}
