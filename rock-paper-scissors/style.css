@@ -4,36 +4,109 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     background-image: radial-gradient(#1f3756, #141539);
     color: white;
-    height: 100vh;
     text-transform: uppercase;
     font-size: .8rem;
-
 }
 
+.rules-btn {
+    background-color: transparent;
+
+    position: absolute;
+    right: 2%;
+    bottom: 4%;
+    font-weight: normal;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: .7em 2em;
+    font-size: 1.1em;
+    transition: .3s;
+    outline: none;
+}
+
+.rules-btn:hover {
+    cursor: pointer;
+    background-color: white;
+    color: hsl(229, 25%, 31%);
+}
+
+.rules-box {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    padding: 6em 5em 4em 5em;
+    background: white;
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.close-icon {
+    position: absolute;
+    top: 7.5%;
+    right: 7%;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
+
+h5 {
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    color: hsl(229, 25%, 31%);
+    font-size: 2.5em;
+}
 
 .logo-score {
-    width: 85%;
-    margin: 2em auto;
+    width: 50%;
+    margin: 2em auto 2em auto;
     border: 2px solid hsl(217, 16%, 45%);
-    border-radius: 5px;
+    border-radius: 15px;
     display: flex;
     justify-content: space-between;
 }
 
 .wrapper-score {
     font-size: 0.8rem;
-    margin: .8em;
+    margin: 1em;
     padding: .25em;
     text-align: center;
     color: hsl(229, 64%, 46%);
     background-color: white;
     width: 20%;
     border-radius: 5px;
+}
+
+.text {
+    margin-top: .5em;
+    letter-spacing: 1.5px;
+    font-size: 1.2em;
+}
+
+.number {
+    font-weight: 700;
+    font-size: 3em;
+    color: hsl(229, 25%, 31%);
 
 }
 
@@ -50,8 +123,18 @@ body {
     color: hsl(229, 25%, 31%);
 }
 
+.text-result {
+    display: none;
+}
+
+.display-text {
+    display: block;
+}
 
 #action-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-image: url('images/bg-pentagon.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -60,7 +143,26 @@ body {
     position: relative;
     height: 50vh;
     margin: 5em auto;
-    border: 1px solid red;
+}
+
+.play-again {
+    text-transform: uppercase;
+    color: hsl(229, 25%, 31%);
+    position: absolute;
+    letter-spacing: 1.5px;
+    top: 70%;
+    background-color: white;
+    border: none;
+    display: none;
+    padding: .5em 1em;
+    border-radius: 5px;
+    transition: .3s;
+    outline: none;
+}
+
+.play-again:hover {
+    cursor: pointer;
+    color: #7f21a5
 }
 
 .player-pick {
@@ -88,22 +190,20 @@ body {
     background: transparent
 }
 
-#scissors-command {
-    top: -20%;
+.scissors-command {
+    top: -15%;
     left: 37%;
     background: radial-gradient(#ec9e0e, #eca922);
     box-shadow: inset 0px -6px 3px #a46e0a;
     transition: .3s;
 }
 
-#scissors-command:hover {
-
+.scissors-command:hover {
     background: radial-gradient(#e0970f, #db9c1e);
-
 }
 
 
-#paper-command {
+.paper-command {
     top: 20%;
     left: 75%;
     background: radial-gradient(#4865f4, #5671f5);
@@ -111,7 +211,7 @@ body {
     transition: .3s;
 }
 
-#spock-command {
+.spock-command {
     top: 20%;
     left: 0;
     background: radial-gradient(#38a0b3, #52bed1);
@@ -126,23 +226,21 @@ body {
 }
 
 
-#lizard-command {
-    bottom: -20%;
+.lizard-command {
+    top: 80%;
     left: 15%;
     background: radial-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
     box-shadow: inset 0px -6px 3px #7f21a5;
     transition: .3s;
 }
 
-#lizard-command:hover {
-    bottom: -20%;
-    left: 15%;
+.lizard-command:hover {
     background: radial-gradient(hsl(261, 63%, 57%), hsl(261, 57%, 58%));
     box-shadow: inset 0px -6px 3px #7f21a5;
 
 }
 
-#rock-command {
+.rock-command {
     top: 80%;
     left: 60%;
     background: radial-gradient(#dc2e4e, #dd405d);
@@ -150,35 +248,35 @@ body {
     transition: .3s;
 }
 
-#scissors-svg {
+.scissors-svg {
     background: url('images/icon-scissors.svg');
     background-repeat: no-repeat;
     background-position: center;
 
 }
 
-#spock-svg {
+.spock-svg {
     background: url('images/icon-spock.svg');
     background-repeat: no-repeat;
     background-position: center;
 
 }
 
-#paper-svg {
+.paper-svg {
     background: url('images/icon-paper.svg');
     background-repeat: no-repeat;
     background-position: center;
 
 }
 
-#lizard-svg {
+.lizard-svg {
     background: url('images/icon-lizard.svg');
     background-repeat: no-repeat;
     background-position: center;
 
 }
 
-#rock-svg {
+.rock-svg {
     background: url('images/icon-rock.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -208,7 +306,7 @@ body {
     z-index: -2;
 }
 
-.kurwa {
+.cover-command {
     position: absolute;
     top: 0;
     left: 0;
@@ -217,9 +315,6 @@ body {
     z-index: 5;
     border-radius: 50%;
 }
-
-
-
 
 .computer-circle {
     position: absolute;
@@ -230,9 +325,8 @@ body {
     height: 130px;
     border-radius: 50%;
     background-color: black;
-    animation-name: ich-habe-wyjebane;
+    animation-name: resizing;
     animation-duration: 1s;
-
     opacity: .2
 }
 
@@ -241,7 +335,6 @@ body {
     top: 50%;
     left: 64%;
     transform: translateY(-50%);
-
 }
 
 .player-circle {
@@ -253,7 +346,7 @@ body {
 
 
 
-@keyframes ich-habe-wyjebane {
+@keyframes resizing {
 
     0% {
         transform: scale(1) translateY(-50%);
@@ -281,16 +374,44 @@ body {
     }
 }
 
-.wygrana {
+.player-win {
     position: absolute;
     display: block;
     background-image: repeating-radial-gradient(#1e1e48 25%, #1f3756 38%);
     z-index: -5;
-    opacity: 40%;
-    top: -5%;
+    opacity: 20%;
+    top: 5%;
     left: -12%;
     width: 350px;
     height: 350px;
     border-radius: 50%;
 
+}
+
+.computer-win {
+    position: absolute;
+    display: block;
+    background-image: repeating-radial-gradient(#1e1e48 25%, #1f3756 38%);
+    z-index: -5;
+    opacity: 40%;
+    top: 5%;
+    left: 42%;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+
+}
+
+
+
+.cmp {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: black;
 }

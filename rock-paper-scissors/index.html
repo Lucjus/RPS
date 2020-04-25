@@ -11,64 +11,67 @@
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-  <section class="logo-score">
-    <div class="logo"><img src="images/logo-bonus.svg" alt=""></div>
-    <div class="wrapper-score">
-      <p>Score</p>
-      <p class='okej'>0</p>
-    </div>
-  </section>
-
-
-  <section id="action-section">
-    <h1 class='player-pick'>You Picked</h1>
-    <h1 class='computer-pick'>The House Picked</h1>
-    <div class="action-section-duel-commands" id="scissors-command">
-      <div class='kurwa' data-id="0"></div>
-      <div class="white-shadow-background"></div>
-      <div class="svgs" id="scissors-svg"></div>
-    </div>
-    <div class="action-section-duel-commands" id="paper-command">
-      <div class='kurwa' data-id="1"></div>
-      <div class="white-shadow-background"></div>
-      <div class="svgs" id="paper-svg"></div>
-
-    </div>
-    <div class="action-section-duel-commands" id="rock-command">
-      <div class='kurwa' data-id="2"></div>
-      <div class="white-shadow-background"></div>
-      <div class="svgs" id="rock-svg"></div>
-    </div>
-
-    <div class="action-section-duel-commands" id="lizard-command">
-      <div class='kurwa' data-id="3"></div>
-      <div class="white-shadow-background"></div>
-      <div class="svgs" id="lizard-svg"></div>
-    </div>
-
-    <div class="action-section-duel-commands" id="spock-command">
-      <div class='kurwa' data-id="4"></div>
-      <div class="white-shadow-background"></div>
-      <div class="svgs" id="spock-svg"></div>
-
-    </div>
-
-  </section>
-
-
-  <!-- 
- 
-
-  You Win
-  You Lose
-
-  Play Again -->
 
 </head>
 
 <body>
+  <div class="modal"></div>
+  <section class="logo-score">
+    <div class="logo"><img src="images/logo-bonus.svg" alt=""></div>
+    <div class="wrapper-score">
+      <p class='text'>Score</p>
+      <p class='number'>0</p>
+    </div>
+  </section>
 
+  <div class="rules-box">
+    <h5>RULES</h5>
+    <img class='close-icon' src="images/icon-close.svg" alt="">
+    <img src="images/image-rules-bonus.svg" alt="">
+  </div>
+  <section id="action-section">
+    <button class="play-again">Play Again</button>
+    <div class="cmp action-section-duel-commands ">
+      <div class='cover-command'></div>
+      <div class="white-shadow-background"></div>
+      <div class="svgs computer-svg"></div>
+    </div>
+    <h1 class='player-pick'>You Picked</h1>
+    <h1 class='computer-pick'>The House Picked</h1>
+    <h2 class="text-result"></h2>
+    <div class="action-section-duel-commands scissors-command">
+      <div class='cover-command' data-id="0"></div>
+      <div class="white-shadow-background"></div>
+      <div class="svgs scissors-svg"></div>
 
+    </div>
+    <div class="action-section-duel-commands paper-command">
+      <div class='cover-command' data-id="1"></div>
+      <div class="white-shadow-background"></div>
+      <div class="svgs paper-svg"></div>
+
+    </div>
+    <div class="action-section-duel-commands rock-command">
+      <div class='cover-command' data-id="2"></div>
+      <div class="white-shadow-background"></div>
+      <div class="svgs rock-svg"></div>
+    </div>
+
+    <div class="action-section-duel-commands lizard-command">
+      <div class='cover-command' data-id="3"></div>
+      <div class="white-shadow-background"></div>
+      <div class="svgs lizard-svg"></div>
+    </div>
+
+    <div class="action-section-duel-commands spock-command">
+      <div class='cover-command' data-id="4"></div>
+      <div class="white-shadow-background"></div>
+      <div class="svgs spock-svg"></div>
+
+    </div>
+
+  </section>
+  <button class="rules-btn">Rules</button>
 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
